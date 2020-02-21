@@ -1,12 +1,50 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-
 <head>
+  <title>iOS - Web Javascript bridge test</title>
+  <meta charset='utf-8'>
+  <style type='text/css'>
+    #title {
+        margin-top: 30pt;
+        font-size: 30pt;
+    }
+    
+    input {
+      width: 50%;
+      font-size: 30pt;
+    }
+    
+    button {
+        background-color: gray;
+        border: none;
+        padding: 10pt;
+        font-size: 30pt;
+        width: 400pt;
+    }
+  </style>
+  <script type='text/javascript'>
+    let messageHandlerName = 'test'
+            
+    function postMessageToNative() {
+      var message = {
+        'key': window.document.getElementById('key').value,
+        'value': window.document.getElementById('value').value
+      };
+      window.webkit.messageHandlers[messageHandlerName].postMessage(message);
+    }
+  
+    function callByNative() {
+      window.document.getElementById('key').value = '';
+      window.document.getElementById('value').value = '';
+    }
+  </script>
 </head>
-
 <body>
-  <h1>hello world</h1>
+  <div align='center'>
+    <p id='title'>웹 -> 앱 메시지 보내기 테스트</p>
+    <input type='text' id='key' placeholder='key'/></br>
+    <input type='text' id='value' placeholder='value'/></br>
+    <button onclick='postMessageToNative();'>앱으로 메시지 보내기(웹버튼)</button>
+  </div>
 </body>
-
 </html>
-
