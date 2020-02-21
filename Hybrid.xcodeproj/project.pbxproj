@@ -3,15 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		826EAA9023FF6555008F31B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826EAA8F23FF6555008F31B5 /* AppDelegate.swift */; };
 		826EAA9223FF6555008F31B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826EAA9123FF6555008F31B5 /* SceneDelegate.swift */; };
-		826EAA9423FF6555008F31B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826EAA9323FF6555008F31B5 /* ViewController.swift */; };
 		826EAA9923FF6558008F31B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 826EAA9823FF6558008F31B5 /* Assets.xcassets */; };
 		826EAA9C23FF6558008F31B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 826EAA9A23FF6558008F31B5 /* LaunchScreen.storyboard */; };
+		826EAAA523FF6A1B008F31B5 /* WebScreenProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826EAAA423FF6A1B008F31B5 /* WebScreenProtocols.swift */; };
+		826EAAA723FF6A26008F31B5 /* WebScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826EAAA623FF6A26008F31B5 /* WebScreenCoordinator.swift */; };
+		826EAAA923FF6A33008F31B5 /* WebScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826EAAA823FF6A33008F31B5 /* WebScreenView.swift */; };
+		826EAAAB23FF6A3D008F31B5 /* WebScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826EAAAA23FF6A3D008F31B5 /* WebScreenViewModel.swift */; };
+		826EAAAE23FF6D2B008F31B5 /* web.html in Resources */ = {isa = PBXBuildFile; fileRef = 826EAAAD23FF6D2B008F31B5 /* web.html */; };
 		E4AD0D6DD84D6935FBFCF67D /* Pods_Hybrid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCDE241DA46AFDF78B374A1D /* Pods_Hybrid.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,10 +25,14 @@
 		826EAA8C23FF6555008F31B5 /* Hybrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hybrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		826EAA8F23FF6555008F31B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		826EAA9123FF6555008F31B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		826EAA9323FF6555008F31B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		826EAA9823FF6558008F31B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		826EAA9B23FF6558008F31B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		826EAA9D23FF6558008F31B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		826EAAA423FF6A1B008F31B5 /* WebScreenProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebScreenProtocols.swift; sourceTree = "<group>"; };
+		826EAAA623FF6A26008F31B5 /* WebScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebScreenCoordinator.swift; sourceTree = "<group>"; };
+		826EAAA823FF6A33008F31B5 /* WebScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebScreenView.swift; sourceTree = "<group>"; };
+		826EAAAA23FF6A3D008F31B5 /* WebScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebScreenViewModel.swift; sourceTree = "<group>"; };
+		826EAAAD23FF6D2B008F31B5 /* web.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = web.html; sourceTree = "<group>"; };
 		FCDE241DA46AFDF78B374A1D /* Pods_Hybrid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hybrid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -69,14 +77,34 @@
 		826EAA8E23FF6555008F31B5 /* Hybrid */ = {
 			isa = PBXGroup;
 			children = (
+				826EAAAC23FF6CFC008F31B5 /* resources */,
+				826EAAA323FF69F5008F31B5 /* modules */,
 				826EAA8F23FF6555008F31B5 /* AppDelegate.swift */,
 				826EAA9123FF6555008F31B5 /* SceneDelegate.swift */,
-				826EAA9323FF6555008F31B5 /* ViewController.swift */,
 				826EAA9823FF6558008F31B5 /* Assets.xcassets */,
 				826EAA9A23FF6558008F31B5 /* LaunchScreen.storyboard */,
 				826EAA9D23FF6558008F31B5 /* Info.plist */,
 			);
 			path = Hybrid;
+			sourceTree = "<group>";
+		};
+		826EAAA323FF69F5008F31B5 /* modules */ = {
+			isa = PBXGroup;
+			children = (
+				826EAAA423FF6A1B008F31B5 /* WebScreenProtocols.swift */,
+				826EAAA623FF6A26008F31B5 /* WebScreenCoordinator.swift */,
+				826EAAA823FF6A33008F31B5 /* WebScreenView.swift */,
+				826EAAAA23FF6A3D008F31B5 /* WebScreenViewModel.swift */,
+			);
+			path = modules;
+			sourceTree = "<group>";
+		};
+		826EAAAC23FF6CFC008F31B5 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				826EAAAD23FF6D2B008F31B5 /* web.html */,
+			);
+			path = resources;
 			sourceTree = "<group>";
 		};
 		A3938553AB02981E6D9CA5EE /* Pods */ = {
@@ -85,7 +113,6 @@
 				10460A2B5DC0F72218B2A856 /* Pods-Hybrid.debug.xcconfig */,
 				39D0901C2446D0CEF000D0D8 /* Pods-Hybrid.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -151,6 +178,7 @@
 			files = (
 				826EAA9C23FF6558008F31B5 /* LaunchScreen.storyboard in Resources */,
 				826EAA9923FF6558008F31B5 /* Assets.xcassets in Resources */,
+				826EAAAE23FF6D2B008F31B5 /* web.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,8 +231,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				826EAA9423FF6555008F31B5 /* ViewController.swift in Sources */,
+				826EAAAB23FF6A3D008F31B5 /* WebScreenViewModel.swift in Sources */,
+				826EAAA923FF6A33008F31B5 /* WebScreenView.swift in Sources */,
 				826EAA9023FF6555008F31B5 /* AppDelegate.swift in Sources */,
+				826EAAA723FF6A26008F31B5 /* WebScreenCoordinator.swift in Sources */,
+				826EAAA523FF6A1B008F31B5 /* WebScreenProtocols.swift in Sources */,
 				826EAA9223FF6555008F31B5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
