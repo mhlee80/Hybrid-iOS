@@ -1,0 +1,6 @@
+xcuserdata/
+Pods/
+.DS_Store
+Hybrid.app.dSYM.zip
+Hybrid.ipa
+Hybrid.xcodeproj/xcuserdata/
